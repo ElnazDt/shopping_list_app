@@ -1,6 +1,8 @@
 import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+
 import 'package:shopping_list/data/categories.dart';
 import 'package:shopping_list/models/category.dart';
 import 'package:shopping_list/models/grocery_item.dart';
@@ -28,8 +30,7 @@ class _NewItemState extends State<NewItem> {
         _isSending = true;
       });
       final url = Uri.https(
-          'flutter-training-b81c7-default-rtdb.europe-west1.firebasedatabase.app',
-          'shopping-list.json');
+          'flutter-training-b81c7-default-rtdb.europe-west1.firebasedatabase.app', 'shopping-list.json');
       final response = await http.post(
         url,
         headers: {
